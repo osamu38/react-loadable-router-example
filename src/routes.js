@@ -5,13 +5,13 @@ import fakeDelay from './helpers/fakeDelay';
 
 export const Home = Loadable({
   loader: () => import('./components/Home'),
-  loading: (props) => <Loading {...props} />,
+  loading: Loading,
 });
 export const About = Loadable({
   loader: () => fakeDelay(2000).then(() => import('./components/About')),
-  loading: (props) => <Loading {...props} />,
+  loading: Loading,
 });
 export const News = Loadable({
   loader: () => import('./components/News'),
-  loading: (props) => <Loading {...props} />,
+  loading: Loading,
 });
